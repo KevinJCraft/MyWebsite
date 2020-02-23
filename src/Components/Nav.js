@@ -3,10 +3,17 @@ import { NavLink } from "react-router-dom";
 import { MenuContext } from "../Context/MenuContext";
 
 import "../CSS/nav.css";
+import useOutsideClick from "../Hooks/useOutsideClick";
 
 const Nav = () => {
 	const mainNav = useRef();
 	const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
+
+	const closeMenu = () => {
+		setIsMenuOpen(false);
+	};
+
+	useOutsideClick(mainNav, closeMenu);
 
 	useEffect(() => {
 		if (isMenuOpen) {
@@ -16,9 +23,6 @@ const Nav = () => {
 		}
 	}, [isMenuOpen]);
 
-	const closeMenu = () => {
-		setIsMenuOpen(false);
-	};
 	return (
 		<ul className="main-nav" ref={mainNav}>
 			<li>
@@ -33,12 +37,7 @@ const Nav = () => {
 			</li>
 			<li>
 				<NavLink to="./about" onClick={closeMenu}>
-					About
-				</NavLink>
-			</li>
-			<li>
-				<NavLink to="./resume" onClick={closeMenu}>
-					Resume
+					About me
 				</NavLink>
 			</li>
 			<li>

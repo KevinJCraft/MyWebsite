@@ -1,18 +1,15 @@
 import React from "react";
 import MenuButton from "./MenuButton";
-import "../CSS/menuButton.css";
-
-const style = {
-	backgroundColor: "red",
-	height: "100vh",
-	width: "100vw"
-};
+import "../CSS/home-page.css";
 
 const Home = () => {
 	return (
-		<div style={style}>
+		<div className="home-screen">
 			<MenuButton />
-			Home
+			<div className="hero">
+				<h1>Kevin Craft</h1>
+				<h2>Web developer</h2>
+			</div>
 		</div>
 	);
 };

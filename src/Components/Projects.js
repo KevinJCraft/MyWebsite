@@ -1,15 +1,17 @@
 import React from "react";
 import MenuButton from "./MenuButton";
-const style = {
-	backgroundColor: "yellow",
-	height: "100vh",
-	width: "100vw"
-};
+import "../CSS/projects-page.css";
+
+import Project from "./Project";
 
 const Projects = () => {
 	return (
-		<div style={style}>
-			<MenuButton /> Projects
+		<div className="my-projects-page">
+			<MenuButton />
+			<header className="my-projects-header">
+				<h1>My Projects</h1>
+			</header>
+			<Project />
 		</div>
 	);
 };
