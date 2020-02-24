@@ -4,13 +4,13 @@ import "../CSS/about-me-page.css";
 
 const About = () => {
 	return (
-		<div>
+		<div className="about-me-page">
 			<MenuButton />
 			<header className="about-me-header">
 				<h1>Who am I</h1>
 			</header>
 			<main className="wrapper">
-				<div className="work-experience">
+				<div className="work-experience section">
 					<h3>Work Experience</h3>
 					<div>
 						<h4>2011 - present</h4>
@@ -25,7 +25,7 @@ const About = () => {
 						<p>Harrahs Metropolis - Dealer</p>
 					</div>
 				</div>
-				<div className="education">
+				<div className="education section">
 					<h3>Education</h3>
 					<div>
 						<h4>2019 - presesnt</h4>
@@ -36,7 +36,7 @@ const About = () => {
 						<p>Eastern Kentucky University</p>
 					</div>
 				</div>
-				<div className="skills">
+				<div className="skills section">
 					<h3>Skills</h3>
 					<ul>
 						<li>HTML5</li>

@@ -1,5 +1,6 @@
 .my-projects-page {
-	background-color: yellow;
+	background: url("../Images/background-blank-empty-light-62693.jpg");
+	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 }

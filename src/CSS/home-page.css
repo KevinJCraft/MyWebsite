@@ -1,9 +1,19 @@
 .home-screen {
-	background-color: red;
+	background: url("../Images/white-painted-wall-1939485.jpg");
+	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 }
 
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-style: italic;
+}
+
 .hero {
+	padding-top: 200px;
 	text-align: center;
 }

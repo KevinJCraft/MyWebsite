@@ -1,6 +1,9 @@
 .contact-me-page {
-	background-color: green;
+	background: url("../Images/wall-with-white-wooden-planks-3652972.jpg");
+	background-attachment: fixed;
+	background-size: cover;
 	height: 100vh;
+	width: 100vw;
 }
 
 h1 {
