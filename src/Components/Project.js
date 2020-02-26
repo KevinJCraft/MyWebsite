@@ -1,20 +1,23 @@
 import React from "react";
+import { FaGithubSquare } from "react-icons/fa";
+import { FiMonitor } from "react-icons/fi";
 import "../CSS/project.css";
 
-const Project = () => {
+const Project = ({ data }) => {
+	const { name, description, gitLink, demoLink, imgPath } = data;
+
 	return (
 		<div className="project">
-			<h2>One of my Projects</h2>
-			<img
-				src={require("../Images/project-demo-snapshot.jpg")}
-				alt="screenshot of site"
-			/>
-			<span>This is the site that I built</span>
+			<h2>{name}</h2>
+			<img src={imgPath} alt={`screenshot of ${name}`} />
+			<span>{description}</span>
 			<div className="links">
-				<a href="https://github.com">
-					<i>Git</i>
+				<a href={gitLink}>
+					<FaGithubSquare fill="darkcyan" />
 				</a>
-				<a href="https://reddit.com">Site</a>
+				<a href={demoLink}>
+					<FiMonitor stroke="darkcyan" />
+				</a>
 			</div>
 		</div>
 	);
