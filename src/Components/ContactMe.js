@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import MenuButton from "./MenuButton";
 import "../CSS/contact-me-page.css";
+import useLoadingEffect from "../Hooks/useLoadingEffects/useLoadingEffects";
 
 const ContactMe = () => {
 	const [nameText, setNameText] = useState("");
 	const [emailText, setEmailText] = useState("");
 	const [messageText, setMessageText] = useState("");
+	const el = useLoadingEffect("fade");
+
 	return (
-		<div className="contact-me-page">
+		<div className="contact-me-page" ref={el}>
 			<MenuButton />
 			<h1>Contact Me</h1>
 			<form>
 				<div>
-					<label for="name">Name:</label>
+					<label htmlFor="name">Name:</label>
 					<br />
 					<input
 						id="name"
@@ -22,7 +25,7 @@ const ContactMe = () => {
 					/>
 				</div>
 				<div>
-					<label for="email">Email:</label>
+					<label htmlFor="email">Email:</label>
 					<br />
 					<input
 						id="email"
@@ -32,7 +35,7 @@ const ContactMe = () => {
 					/>
 				</div>
 				<div>
-					<label for="message">Message:</label>
+					<label htmlFor="message">Message:</label>
 					<br />
 					<textarea
 						id="message"

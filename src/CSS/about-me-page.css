@@ -1,8 +1,5 @@
 .about-me-page {
-	background: url("../Images/crumpled-paper-1587442.jpg");
-	background-size: cover;
-	height: 100vh;
-	width: 100vw;
+	background: lightcoral;
 }
 
 .about-me-header {

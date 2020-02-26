@@ -1,10 +1,13 @@
 import React from "react";
 import MenuButton from "./MenuButton";
 import "../CSS/about-me-page.css";
+import useLoadingEffect from "../Hooks/useLoadingEffects/useLoadingEffects";
 
 const About = () => {
+	const el = useLoadingEffect("fade");
+
 	return (
-		<div className="about-me-page">
+		<div className="about-me-page" ref={el}>
 			<MenuButton />
 			<header className="about-me-header">
 				<h1>Who am I</h1>

@@ -1,7 +1,7 @@
 .my-projects-page {
-	background: url("../Images/background-blank-empty-light-62693.jpg");
+	background: burlywood;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 }
 

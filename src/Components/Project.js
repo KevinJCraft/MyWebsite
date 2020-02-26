@@ -11,10 +11,10 @@ const Project = () => {
 			/>
 			<span>This is the site that I built</span>
 			<div className="links">
-				<a href="#">
+				<a href="https://github.com">
 					<i>Git</i>
 				</a>
-				<a href="#">Site</a>
+				<a href="https://reddit.com">Site</a>
 			</div>
 		</div>
 	);

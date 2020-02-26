@@ -1,12 +1,14 @@
 .home-screen {
-	background: url("../Images/white-painted-wall-1939485.jpg");
+	background: white;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
+	transition: all 1s ease-in-out;
 }
 
 h1 {
 	font-size: 40px;
+	position: relative;
 }
 
 h2 {
