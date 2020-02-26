@@ -1,5 +1,6 @@
 .main-nav {
 	list-style: none;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -15,10 +16,12 @@
 
 .show {
 	max-height: 500px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .main-nav a {
-	font-size: 0.95em;
+	font-size: 1.15em;
+	font-weight: bold;
 	color: #222;
 	text-transform: uppercase;
 	display: inline-block;
