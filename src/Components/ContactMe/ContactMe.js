@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import MenuButton from "./MenuButton";
-import "../CSS/contact-me-page.css";
-import useLoadingEffect from "../Hooks/useLoadingEffects/useLoadingEffects";
+import MenuButton from "../MenuButton";
+import "./contactMe.css";
+import { MdSend } from "react-icons/md";
+import useLoadingEffect from "../../Hooks/useLoadingEffects/useLoadingEffects";
 
 const ContactMe = () => {
 	const [nameText, setNameText] = useState("");
@@ -43,7 +44,12 @@ const ContactMe = () => {
 						onChange={e => setMessageText(e.target.value)}
 					/>
 				</div>
-				<input type="submit" />
+				<div className="button-container">
+					<button className="send-button" type="submit">
+						{" "}
+						<MdSend fill="white" />{" "}
+					</button>
+				</div>
 			</form>
 		</div>
 	);

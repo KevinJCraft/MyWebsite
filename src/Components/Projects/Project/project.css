@@ -12,7 +12,7 @@
 	display: flex;
 }
 
-h1 {
+.projects-h1 {
 	padding-bottom: 1em;
 	text-shadow: -7px 9px 20px rgba(100, 0, 0, 0.3);
 }

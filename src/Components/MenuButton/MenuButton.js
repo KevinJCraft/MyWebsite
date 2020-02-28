@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { MenuContext } from "../Context/MenuContext";
-import "../CSS/menuButton.css";
+import { MenuContext } from "../../Context/MenuContext";
+import "./menuButton.css";
 
 const MenuButton = () => {
 	const { setIsMenuOpen } = useContext(MenuContext);

@@ -1,7 +1,7 @@
 import React from "react";
-import MenuButton from "./MenuButton";
-import "../CSS/about-me-page.css";
-import useLoadingEffect from "../Hooks/useLoadingEffects/useLoadingEffects";
+import MenuButton from "../MenuButton";
+import "./aboutMe.css";
+import useLoadingEffect from "../../Hooks/useLoadingEffects/useLoadingEffects";
 
 const About = () => {
 	const el = useLoadingEffect("fade");
@@ -15,26 +15,26 @@ const About = () => {
 			<main className="wrapper">
 				<div className="work-experience section">
 					<h3>Work Experience</h3>
-					<div>
+					<div className="info">
 						<h4>2011 - present</h4>
 						<p>USPS - Letter Carrier</p>
 					</div>
-					<div>
+					<div className="info">
 						<h4>2010 - 2011</h4>
 						<p>Self Employeed - investments</p>
 					</div>
-					<div>
+					<div className="info">
 						<h4>2007 - 2010</h4>
 						<p>Harrahs Metropolis - Dealer</p>
 					</div>
 				</div>
 				<div className="education section">
 					<h3>Education</h3>
-					<div>
+					<div className="info">
 						<h4>2019 - presesnt</h4>
 						<p>JCTCS/Code Louisville</p>
 					</div>
-					<div>
+					<div className="info">
 						<h4>2001-2004</h4>
 						<p>Eastern Kentucky University</p>
 					</div>

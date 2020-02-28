@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
-import "../CSS/project.css";
+import "./project.css";
 
 const Project = ({ data }) => {
 	const { name, description, gitLink, demoLink, imgPath } = data;

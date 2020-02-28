@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./Home";
-import AboutMe from "./AboutMe";
-import ContactMe from "./ContactMe";
-import Projects from "./Projects";
-import Nav from "./Nav";
+import Home from "../Home";
+import AboutMe from "../AboutMe";
+import ContactMe from "../ContactMe";
+import Projects from "../Projects";
+import Nav from "../Nav";
 
-import { MenuContext } from "../Context/MenuContext";
+import { MenuContext } from "../../Context/MenuContext";
 
 const MyWebsite = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);

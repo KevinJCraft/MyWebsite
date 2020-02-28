@@ -6,7 +6,7 @@
 	transition: all 1s ease-in-out;
 }
 
-h1 {
+.name {
 	font-size: 40px;
 	position: relative;
 }

@@ -1,9 +1,9 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { MenuContext } from "../Context/MenuContext";
+import { MenuContext } from "../../Context/MenuContext";
 
-import "../CSS/nav.css";
-import useOutsideClick from "../Hooks/useOutsideClick";
+import "./nav.css";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 
 const Nav = () => {
 	const mainNav = useRef();
