@@ -4,7 +4,6 @@ import useFormValidation from "../../Hooks/useFormValidation/useFormValidation";
 import axios from "axios";
 import "./contactMe.css";
 import { MdSend } from "react-icons/md";
-import useLoadingEffect from "../../Hooks/useLoadingEffects/useLoadingEffects";
 
 const INITIAL_STATE = {
 	name: "",
@@ -26,7 +25,6 @@ const ContactMe = () => {
 		errors,
 		isSubmitting
 	} = useFormValidation(INITIAL_STATE, sendMail);
-	const el = useLoadingEffect("fade");
 
 	function sendMail() {
 		axios
@@ -59,7 +57,7 @@ const ContactMe = () => {
 	}
 
 	return (
-		<div className="contact-me-page" ref={el}>
+		<div className="contact-me-page">
 			<MenuButton />
 			<h1>Contact Me</h1>
 			<form onSubmit={handleSubmit}>

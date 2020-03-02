@@ -1,5 +1,6 @@
 .about-me-page {
 	background: white;
+	animation: FADE-IN 1s;
 }
 
 .about-me-header {

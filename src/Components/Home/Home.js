@@ -1,7 +1,6 @@
 import React from "react";
 import MenuButton from "../MenuButton";
 import "./home.css";
-import useLoadingEffect from "../../Hooks/useLoadingEffects/useLoadingEffects";
 
 const Home = () => {
 	//const el = useLoadingEffect("fade");
@@ -13,7 +12,7 @@ const Home = () => {
 			<MenuButton />
 			<div className="hero">
 				<h1 className="name">Kevin Craft</h1>
-				<h2>Web developer</h2>
+				<h2 className="title">Web developer</h2>
 			</div>
 		</div>
 	);

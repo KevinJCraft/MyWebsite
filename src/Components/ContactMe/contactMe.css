@@ -5,6 +5,7 @@
 	min-height: 100vh;
 	width: 100vw;
 	padding-bottom: 25px;
+	animation: FADE-IN 1s;
 }
 
 h1 {

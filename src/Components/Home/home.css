@@ -3,18 +3,19 @@
 	background-size: cover;
 	min-height: 100vh;
 	width: 100vw;
-	/* transition: all 1s ease-in-out; */
 	animation: FADE-IN 1s;
 }
 
 .name {
 	font-size: 40px;
 	position: relative;
-	animation: SLIDE-LEFT 5s;
+	animation: SLIDE-LEFT 1s;
 }
 
-h2 {
+.title {
 	font-style: italic;
+	position: relative;
+	animation: SLIDE-UP 1s;
 }
 
 .hero {
@@ -42,9 +43,17 @@ h2 {
 
 @keyframes SLIDE-LEFT {
 	0% {
-		right: 100px;
+		left: 100px;
 	}
 	100% {
-		right: 0px;
+		left: 0px;
+	}
+}
+@keyframes SLIDE-UP {
+	0% {
+		top: 100px;
+	}
+	100% {
+		top: 0px;
 	}
 }

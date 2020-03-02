@@ -1,5 +1,3 @@
-import API_KEY from "../../../../New folder/api-key";
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -23,7 +21,7 @@ app.get("/api", (req, res, next) => {
 });
 
 app.post("/api/email", (req, res, next) => {
-	sendGrid.setApiKey(API_KEY);
+	sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
 	const msg = {
 		to: "Craft.Kevin.J@Gmail.com",
 		from: req.body.email,
