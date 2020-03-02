@@ -12,17 +12,19 @@ h1 {
 }
 
 form {
-	width: 90%;
+	width: 95%;
 	padding: 1em;
 	margin: auto;
-	font-size: 40px;
 	background-color: rgba(1, 1, 1, 0.2);
 }
 
-form div {
-	padding-top: 10px;
+.input-container {
+	padding-bottom: 1.55em;
 }
 
+label {
+	font-size: 20px;
+}
 input,
 textarea,
 .send-button {
@@ -38,11 +40,37 @@ textarea {
 }
 
 .button-container {
-	text-align: right;
+	display: flex;
+	clear: both;
 }
 
 .send-button {
-	width: 50%;
+	width: 40%;
 	background-color: rgb(132, 235, 132);
-	align-self: right;
+}
+
+.error {
+	border: 1px solid red;
+}
+
+.error-message {
+	font-size: 0.75em;
+	color: red;
+	float: right;
+}
+
+.completion-message-container {
+	flex: 1;
+	font-size: 1.25em;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.submitted {
+	color: rgb(51, 122, 51);
+	text-align: left;
+}
+
+.not-submitted {
+	color: red;
+	text-align: left;
 }

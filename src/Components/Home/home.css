@@ -3,12 +3,14 @@
 	background-size: cover;
 	min-height: 100vh;
 	width: 100vw;
-	transition: all 1s ease-in-out;
+	/* transition: all 1s ease-in-out; */
+	animation: FADE-IN 1s;
 }
 
 .name {
 	font-size: 40px;
 	position: relative;
+	animation: SLIDE-LEFT 5s;
 }
 
 h2 {
@@ -18,4 +20,31 @@ h2 {
 .hero {
 	padding-top: 200px;
 	text-align: center;
+}
+
+@keyframes FADE-IN {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes GROW-TEXT {
+	0% {
+		font-size: 10px;
+	}
+	100% {
+		font-size: 40px;
+	}
+}
+
+@keyframes SLIDE-LEFT {
+	0% {
+		right: 100px;
+	}
+	100% {
+		right: 0px;
+	}
 }
