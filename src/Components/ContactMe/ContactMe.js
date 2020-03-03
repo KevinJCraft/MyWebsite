@@ -17,17 +17,6 @@ const ContactMe = () => {
 		errorMessage: ""
 	});
 
-	const {
-		handleSubmit,
-		handleChange,
-		handleBlur,
-		values,
-		setValues,
-		errors,
-		isSubmitting,
-		setSubmitting
-	} = useFormValidation(INITIAL_STATE, sendMail);
-
 	function sendMail() {
 		axios
 			.post("http://localhost:3030/api/email", {
@@ -66,6 +55,17 @@ const ContactMe = () => {
 				}, 5000);
 			});
 	}
+
+	const {
+		handleSubmit,
+		handleChange,
+		handleBlur,
+		values,
+		setValues,
+		errors,
+		isSubmitting,
+		setSubmitting
+	} = useFormValidation(INITIAL_STATE, sendMail);
 
 	return (
 		<div className="contact-me-page">
@@ -119,7 +119,6 @@ const ContactMe = () => {
 							<p className="not-submitted">{formCompletion.errorMessage}</p>
 						)}
 					</div>
-					{console.log(isSubmitting)}
 					<button
 						name="submit"
 						disabled={isSubmitting}

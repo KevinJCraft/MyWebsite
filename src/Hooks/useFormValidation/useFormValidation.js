@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import validateForm from "./validateForm";
 
 const useFormValidation = (initialState, submitAction) => {
 	const [values, setValues] = useState(initialState);
 	const [errors, setErrors] = useState({});
 	const [isSubmitting, setSubmitting] = useState(false);
-
-	useEffect(() => {
-		if (isSubmitting) {
-			const noErrors = Object.keys(errors).length === 0;
-			if (noErrors) {
-				submitAction();
-			} else {
-				setSubmitting(false);
-			}
-		}
-	}, [errors]);
 
 	const handleBlur = event => {
 		let elName = event.target.name;
@@ -33,7 +22,10 @@ const useFormValidation = (initialState, submitAction) => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		const validationErrors = validateForm(values, errors, "submit");
-		setSubmitting(true);
+		if (Object.keys(validationErrors).length === 0) {
+			setSubmitting(true);
+			submitAction();
+		}
 		setErrors(validationErrors);
 	};
 
