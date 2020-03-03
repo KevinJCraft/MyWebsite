@@ -21,7 +21,7 @@ app.get("/api", (req, res, next) => {
 });
 
 app.post("/api/email", (req, res, next) => {
-	sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
+	sendGrid.setApiKey(process.env.SENDGRID_API_KEY); //API KEY stored in file not tracked by git
 	const msg = {
 		to: "Craft.Kevin.J@Gmail.com",
 		from: req.body.email,

@@ -1,33 +1,55 @@
 .main-nav {
-	list-style: none;
-	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	overflow: hidden;
-	max-height: 0;
-	transition: all 0.5s ease-in-out 0s;
-	margin: 0;
-	position: absolute;
+	max-width: 0;
+	transition: all 0.5s ease-out 0s;
+	position: fixed;
+	right: 0;
 	background-color: white;
-	width: 100%;
+	width: 65%;
+	height: 100%;
 	z-index: 1;
 }
 
+.main-nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.nav-internal-links {
+	flex: 1;
+}
+
+.nav-external-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-bottom: 1em;
+}
+
 .show {
-	max-height: 500px;
+	max-width: 500px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.main-nav li {
+	text-align: right;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .main-nav a {
 	font-size: 1.15em;
+	width: 100%;
 	font-weight: bold;
 	color: #222;
 	text-transform: uppercase;
-	display: inline-block;
+	display: block;
 	padding: 1em;
 	transition: 0.2s;
 	text-decoration: none;
+	overflow: hidden;
 }
 .main-nav a:hover,
 .main-nav .active {

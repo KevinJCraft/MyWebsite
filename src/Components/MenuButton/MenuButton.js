@@ -15,7 +15,7 @@ const MenuButton = () => {
 
 	return (
 		<button onClick={handleClick} className="menu-button">
-			&#9776;
+			<span>&#9776;</span>
 		</button>
 	);
 };

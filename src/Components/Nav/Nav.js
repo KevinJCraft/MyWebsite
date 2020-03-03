@@ -18,34 +18,42 @@ const Nav = () => {
 	useEffect(() => {
 		if (isMenuOpen) {
 			mainNav.current.classList.add("show");
+
+			mainNav.current.style.height = window.innerHeight;
 		} else {
 			mainNav.current.classList.remove("show");
 		}
 	}, [isMenuOpen]);
 
 	return (
-		<ul className="main-nav" ref={mainNav}>
-			<li>
-				<NavLink to="./" exact onClick={closeMenu}>
-					Home
-				</NavLink>
-			</li>
-			<li>
-				<NavLink to="./projects" onClick={closeMenu}>
-					Projects
-				</NavLink>
-			</li>
-			<li>
-				<NavLink to="./about" onClick={closeMenu}>
-					About me
-				</NavLink>
-			</li>
-			<li>
-				<NavLink to="./contactme" onClick={closeMenu}>
-					Contact Me
-				</NavLink>
-			</li>
-		</ul>
+		<div className="main-nav" ref={mainNav}>
+			<ul className="nav-internal-links">
+				<li>
+					<NavLink to="./" exact onClick={closeMenu}>
+						Home
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="./projects" onClick={closeMenu}>
+						Projects
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="./about" onClick={closeMenu}>
+						About me
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="./contactme" onClick={closeMenu}>
+						Contact Me
+					</NavLink>
+				</li>
+			</ul>
+			<ul className="nav-external-links">
+				<li>git</li>
+				<li>LinkedIn</li>
+			</ul>
+		</div>
 	);
 };
 
