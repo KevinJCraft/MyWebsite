@@ -7,17 +7,10 @@ const useFormValidation = (initialState, submitAction) => {
 	const [isSubmitting, setSubmitting] = useState(false);
 
 	useEffect(() => {
-		console.log("why am I here", isSubmitting);
 		if (isSubmitting) {
 			const noErrors = Object.keys(errors).length === 0;
 			if (noErrors) {
 				submitAction();
-				setValues({
-					name: "",
-					email: "",
-					message: ""
-				});
-				setSubmitting(false);
 			} else {
 				setSubmitting(false);
 			}
@@ -49,8 +42,10 @@ const useFormValidation = (initialState, submitAction) => {
 		handleChange,
 		handleBlur,
 		values,
+		setValues,
 		errors,
-		isSubmitting
+		isSubmitting,
+		setSubmitting
 	};
 };
 

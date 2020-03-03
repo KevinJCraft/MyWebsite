@@ -2,11 +2,12 @@
 	background: white;
 	background-size: cover;
 	min-height: 100vh;
-	width: 100vw;
+	max-width: 100vw;
 	animation: FADE-IN 1s;
 }
 
 .name {
+	display: inline-block;
 	font-size: 40px;
 	position: relative;
 	animation: SLIDE-LEFT 1s;
@@ -15,7 +16,7 @@
 .title {
 	font-style: italic;
 	position: relative;
-	animation: SLIDE-UP 1s;
+	animation: SLIDE-DOWN 1s;
 }
 
 .hero {
@@ -32,24 +33,16 @@
 	}
 }
 
-@keyframes GROW-TEXT {
-	0% {
-		font-size: 10px;
-	}
-	100% {
-		font-size: 40px;
-	}
-}
-
 @keyframes SLIDE-LEFT {
 	0% {
-		left: 100px;
+		left: 50px;
 	}
 	100% {
 		left: 0px;
 	}
 }
-@keyframes SLIDE-UP {
+
+@keyframes SLIDE-DOWN {
 	0% {
 		top: 100px;
 	}

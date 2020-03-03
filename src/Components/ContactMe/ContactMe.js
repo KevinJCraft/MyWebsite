@@ -22,8 +22,10 @@ const ContactMe = () => {
 		handleChange,
 		handleBlur,
 		values,
+		setValues,
 		errors,
-		isSubmitting
+		isSubmitting,
+		setSubmitting
 	} = useFormValidation(INITIAL_STATE, sendMail);
 
 	function sendMail() {
@@ -39,6 +41,8 @@ const ContactMe = () => {
 						wasCompleted: true,
 						errorMessage: ""
 					});
+					setValues(INITIAL_STATE);
+					setSubmitting(false);
 					setTimeout(() => {
 						setFormCompletion({
 							wasCompleted: false,
@@ -53,6 +57,13 @@ const ContactMe = () => {
 					wasCompleted: false,
 					errorMessage: "Email not sent. Server Error"
 				});
+				setSubmitting(false);
+				setTimeout(() => {
+					setFormCompletion({
+						wasCompleted: false,
+						errorMessage: ""
+					});
+				}, 5000);
 			});
 	}
 
@@ -108,6 +119,7 @@ const ContactMe = () => {
 							<p className="not-submitted">{formCompletion.errorMessage}</p>
 						)}
 					</div>
+					{console.log(isSubmitting)}
 					<button
 						name="submit"
 						disabled={isSubmitting}

@@ -18,7 +18,6 @@ const Nav = () => {
 	useEffect(() => {
 		if (isMenuOpen) {
 			mainNav.current.classList.add("show");
-
 			mainNav.current.style.height = window.innerHeight;
 		} else {
 			mainNav.current.classList.remove("show");
