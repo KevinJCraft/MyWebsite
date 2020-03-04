@@ -70,7 +70,7 @@ const ContactMe = () => {
 	return (
 		<div className="contact-me-page">
 			<MenuButton />
-			<h1>Contact Me</h1>
+			<h1 className="text-shadow">Contact Me</h1>
 			<form onSubmit={handleSubmit}>
 				<div className="input-container">
 					<label htmlFor="name">Name:</label>

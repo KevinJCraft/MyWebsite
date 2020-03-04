@@ -13,10 +13,10 @@ const Project = ({ data }) => {
 			<span>{description}</span>
 			<div className="links">
 				<a href={gitLink}>
-					<FaGithubSquare fill="darkcyan" />
+					<FaGithubSquare fill="rgba(5, 227, 235, 0.856)" />
 				</a>
 				<a href={demoLink}>
-					<FiMonitor stroke="darkcyan" />
+					<FiMonitor stroke="rgba(5, 227, 235, 0.856)" />
 				</a>
 			</div>
 		</div>

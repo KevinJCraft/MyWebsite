@@ -6,9 +6,9 @@
 	transition: all 0.5s ease-out 0s;
 	position: fixed;
 	right: 0;
-	background-color: white;
+	background-color: rgb(51, 51, 54);
 	width: 65%;
-	height: 100%;
+	min-height: 100%;
 	z-index: 1;
 }
 
@@ -22,6 +22,7 @@
 }
 
 .nav-external-links {
+	font-size: 2.25em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -39,11 +40,12 @@
 	white-space: nowrap;
 }
 
-.main-nav a {
-	font-size: 1.15em;
+.nav-internal-links a {
+	font-size: 1.35em;
 	width: 100%;
 	font-weight: bold;
-	color: #222;
+	color: transparent;
+	text-shadow: 0 0 0 white;
 	text-transform: uppercase;
 	display: block;
 	padding: 1em;
@@ -51,32 +53,26 @@
 	text-decoration: none;
 	overflow: hidden;
 }
-.main-nav a:hover,
-.main-nav .active {
-	color: #fff;
-	background: #3b80d1;
+.nav-internal-links a:hover,
+.nav-internal-links .active {
+	color: black;
+	background-color: rgba(250, 250, 250, 0.6);
 }
 
-.mainNav .active {
-	background-color: blue;
-	color: white;
-}
-
-@media (min-width: 460px) {
+@media (min-width: 750px) {
 	.main-nav {
 		position: static;
 		display: block;
 		min-width: 100%;
 		background-color: transparent;
+		min-height: 0;
 	}
 
 	.main-nav a {
-		color: white;
-		text-shadow: 2px 2px rgba(0, 0, 0, 01);
-		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+		font-size: 1.15em;
 	}
 
-	.main-nav a:hover {
+	.nav-internal-links a:hover {
 		background-color: rgba(250, 250, 250, 0.8);
 	}
 
@@ -86,13 +82,56 @@
 
 	.nav-internal-links {
 		display: flex;
+		flex: 1;
 		flex-direction: row;
 		width: 80%;
 		margin: auto;
+		margin-bottom: 80px;
 	}
 
 	.nav-internal-links li {
 		flex: 1;
 		text-align: center;
+	}
+
+	.nav-external-links {
+		display: flex;
+		flex-direction: column;
+		min-height: 120px;
+		justify-content: space-around;
+		color: white;
+		position: fixed;
+		padding-bottom: 0;
+		bottom: 20px;
+		right: 25px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main-nav {
+		display: flex;
+		align-content: flex-end;
+		flex-direction: row;
+	}
+	.nav-internal-links {
+		max-width: 60%;
+		margin-left: 30px;
+	}
+
+	.nav-external-links {
+		position: static;
+		top: 0;
+		bottom: auto;
+		flex-direction: row;
+		width: 200px;
+		min-height: auto;
+	}
+
+	.nav-external-links li {
+		line-height: 61px;
+	}
+
+	.nav-external-links a {
+		height: 61px;
 	}
 }

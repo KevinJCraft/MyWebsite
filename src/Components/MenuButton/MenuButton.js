@@ -14,9 +14,9 @@ const MenuButton = () => {
 	};
 
 	return (
-		<button onClick={handleClick} className="menu-button">
-			<span>&#9776;</span>
-		</button>
+		<div className="menu-button-container">
+			<button onClick={handleClick}>&#9776;</button>
+		</div>
 	);
 };
 

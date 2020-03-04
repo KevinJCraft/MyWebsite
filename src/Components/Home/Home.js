@@ -11,8 +11,8 @@ const Home = () => {
 		<div className="home-screen">
 			<MenuButton />
 			<div className="hero">
-				<h1 className="name">Kevin Craft</h1>
-				<h2 className="title">Web developer</h2>
+				<h1 className="name text-shadow">Kevin J Craft</h1>
+				<h2 className="title text-shadow">Web developer</h2>
 			</div>
 		</div>
 	);

@@ -1,6 +1,8 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { MenuContext } from "../../Context/MenuContext";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 import "./nav.css";
 import useOutsideClick from "../../Hooks/useOutsideClick";
@@ -49,8 +51,24 @@ const Nav = () => {
 				</li>
 			</ul>
 			<ul className="nav-external-links">
-				<li>git</li>
-				<li>LinkedIn</li>
+				<a
+					href="https://github.com/KevinJCraft"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<li>
+						<FaGithubSquare fill="white" />
+					</li>
+				</a>
+				<a
+					href="https://linkedin.com/in/Kevin-J-Craft"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<li>
+						<FaLinkedin fill="white" />
+					</li>
+				</a>
 			</ul>
 		</div>
 	);
