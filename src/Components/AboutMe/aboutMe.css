@@ -1,5 +1,4 @@
 .about-me-page {
-	background: white;
 	animation: FADE-IN 1s;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .section {
-	background-color: rgba(61, 150, 150, 0.2);
+	background-color: rgba(250, 250, 250, 0.6);
 	margin-bottom: 20px;
 	padding: 20px;
 	border-radius: 5px;
@@ -23,7 +22,7 @@
 
 .info {
 	margin-bottom: 1em;
-	background-color: rgba(61, 150, 150, 0.2);
+	background-color: rgba(250, 250, 250, 0.6);
 	padding: 1em;
 	border-radius: 3px;
 }

@@ -18,3 +18,14 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+
+.background {
+	background-image: url(./Images/blur-close-up-code-computer-546819.jpg);
+	background-size: cover;
+	z-index: -1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 125%;
+	width: 125%;
+}

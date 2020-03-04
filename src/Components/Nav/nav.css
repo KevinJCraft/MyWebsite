@@ -61,3 +61,38 @@
 	background-color: blue;
 	color: white;
 }
+
+@media (min-width: 460px) {
+	.main-nav {
+		position: static;
+		display: block;
+		min-width: 100%;
+		background-color: transparent;
+	}
+
+	.main-nav a {
+		color: white;
+		text-shadow: 2px 2px rgba(0, 0, 0, 01);
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+	}
+
+	.main-nav a:hover {
+		background-color: rgba(250, 250, 250, 0.8);
+	}
+
+	.main-nav .active {
+		background-color: rgba(250, 250, 250, 0.6);
+	}
+
+	.nav-internal-links {
+		display: flex;
+		flex-direction: row;
+		width: 80%;
+		margin: auto;
+	}
+
+	.nav-internal-links li {
+		flex: 1;
+		text-align: center;
+	}
+}

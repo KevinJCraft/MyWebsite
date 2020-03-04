@@ -14,6 +14,7 @@ const MyWebsite = () => {
 
 	return (
 		<Router>
+			<div className="background"></div>
 			<MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
 				<Nav />
 				<Switch>
