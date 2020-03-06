@@ -2,16 +2,13 @@
 	background-color: rgba(169, 169, 169, 0.8);
 	width: 80%;
 	max-width: 400px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 3em;
 	position: relative;
 	border-radius: 5px;
 	box-shadow: -7px 9px 20px 0px rgba(0, 0, 0, 0.3);
 	align-self: flex-start;
-}
-
-.project:hover .links {
-	display: flex;
 }
 
 h2 {
@@ -40,8 +37,26 @@ span {
 	top: 40%;
 }
 
+.links a:hover {
+	transform: scale(1.1);
+}
+
 @media (min-width: 1024px) {
 	.project {
 		max-width: 40%;
+	}
+
+	.links {
+		display: none;
+	}
+
+	.project:hover {
+		transition: all 0.5s;
+		transform: scale(1.05);
+		filter: brightness(50%);
+	}
+
+	.project:hover .links {
+		display: flex;
 	}
 }
