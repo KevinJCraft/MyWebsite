@@ -92,26 +92,23 @@ textarea {
 
 @keyframes submitted-text {
 	0% {
-		font-size: 1.25em;
+		opacity: 0;
+		font-size: 1em;
 	}
 
-	10% {
-		font-size: 1.7em;
-	}
 	20% {
 		font-size: 1.25em;
-	}
-
-	30% {
-		font-size: 1.7em;
+		opacity: 1;
 	}
 
 	70% {
-		font-size: 1.7em;
+		font-size: 1.25em;
+		opacity: 1;
 	}
 
 	100% {
-		font-size: 0em;
+		opacity: 0;
+		font-size: 1em;
 	}
 }
 

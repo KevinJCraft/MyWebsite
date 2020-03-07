@@ -64,4 +64,23 @@
 	.hero {
 		padding-top: 100px;
 	}
+	.name {
+		font-size: 70px;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+}
+@media (min-width: 1400px) {
+	.hero {
+		padding-top: 100px;
+	}
+	.name {
+		font-size: 90px;
+	}
+
+	.title {
+		font-size: 50px;
+	}
 }

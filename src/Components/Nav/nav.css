@@ -2,14 +2,14 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	max-width: 0;
-	transition: all 0.5s ease-out 0s;
+	transition: all 0.25s ease-out 0s;
 	position: fixed;
 	right: 0;
 	background-color: rgb(51, 51, 54);
 	width: 65%;
 	min-height: 100%;
 	z-index: 1;
+	transform: translateX(65vw);
 }
 
 .main-nav ul {
@@ -30,7 +30,7 @@
 }
 
 .show {
-	max-width: 500px;
+	transform: translateX(0);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -64,6 +64,7 @@
 		position: static;
 		display: block;
 		min-width: 100%;
+		transform: none;
 		background-color: transparent;
 		min-height: 0;
 	}
