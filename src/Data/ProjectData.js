@@ -3,33 +3,17 @@ const projectData = [
 		name: "Pokedex",
 		description:
 			"Catch'em all with the help of my Pokedex.  Find the stats on all of your favorite Pokemon.  This site uses React and React Router",
-		gitLink: "https://reddit.com",
-		demoLink: "https://reddit.com",
-		imgPath: require("../Images/project-demo-snapshot.jpg")
+		gitLink: "https://github.com/KevinJCraft/Code-Lou-Pokedex",
+		demoLink: "http://kjc-pokedex.surge.sh/",
+		imgPath: require("../Images/Pokedex-demo-img.JPG")
 	},
 	{
-		name: "Hold'em Poker Calculator",
+		name: "Code Lou Landing Page",
 		description:
-			"Tired of your friends complaining that they should have won that hand?  Use my Texas Holdem Poker Calculator to show them that they were behind every step of the way.  This app uses vanilla JS",
-		gitLink: "https://reddit.com",
-		demoLink: "https://reddit.com",
-		imgPath: require("../Images/project-demo-snapshot.jpg")
-	},
-	{
-		name: "Pokedex2",
-		description:
-			"Catch'em all with the help of my Pokedex.  Find the stats on all of your favorite Pokemon.  This site uses React and React Router",
-		gitLink: "https://reddit.com",
-		demoLink: "https://reddit.com",
-		imgPath: require("../Images/project-demo-snapshot.jpg")
-	},
-	{
-		name: "Hold'em Poker Calculator2",
-		description:
-			"Tired of your friends complaining that they should have won that hand?  Use my Texas Holdem Poker Calculator to show them that they were behind every step of the way.  This app uses vanilla JS",
-		gitLink: "https://reddit.com",
-		demoLink: "https://reddit.com",
-		imgPath: require("../Images/project-demo-snapshot.jpg")
+			"This is a mock landing page for Code Louisville.  This site uses CSS grid and CSS flexbox as well as Javascript",
+		gitLink: "https://github.com/KevinJCraft/Code-Lou-Landing-Page",
+		demoLink: "http://kjc-code-lou-landing-page.surge.sh/",
+		imgPath: require("../Images/Code-Lou-Landing-Page-img.JPG")
 	}
 ];
 
