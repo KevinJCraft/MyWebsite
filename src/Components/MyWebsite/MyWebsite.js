@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import "./MyWebsite.css";
 import Home from "../Home";
 import AboutMe from "../AboutMe";
 import ContactMe from "../ContactMe";
 import Projects from "../Projects";
 import Nav from "../Nav";
+import Footer from "../Footer";
 
 import { MenuContext } from "../../Context/MenuContext";
 
@@ -23,6 +24,7 @@ const MyWebsite = () => {
 					<Route path="/Projects" exact component={Projects} />
 					<Route path="/ContactMe" exact component={ContactMe} />
 				</Switch>
+				<Footer />
 			</MenuContext.Provider>
 		</Router>
 	);

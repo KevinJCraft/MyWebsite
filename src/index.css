@@ -11,7 +11,12 @@ html {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	height: 100%;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 code {
@@ -20,24 +25,17 @@ code {
 }
 
 .background {
-	background-image: url(./Images/logo.JPG);
+	background-color: #28208c;
 	background-size: cover;
+	height: 100%;
+	width: 100%;
 	z-index: -1;
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	height: 110%;
-	width: 110%;
-	box-shadow: inset 0px 40px 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .text-shadow {
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1), 0px 0px 5px rgba(0, 0, 0, 0.9),
 		0px 0px 10px rgba(0, 0, 0, 0.9), 0px 0px 20px rgba(0, 0, 0, 0.9);
-}
-
-@media (min-width: 1024px) {
-	.background {
-		filter: brightness(0.8);
-	}
 }

@@ -70,67 +70,71 @@ const ContactMe = () => {
 	return (
 		<div className="contact-me-page">
 			<MenuButton />
-			<h1 className="text-shadow">Contact Me</h1>
-			<form onSubmit={handleSubmit}>
-				<div className="input-container">
-					<label htmlFor="name">Name:</label>
+			<div className="form-container">
+				<h1 className="text-shadow">Contact Me</h1>
+				<form onSubmit={handleSubmit}>
+					<div className="input-container">
+						<label htmlFor="name">Name:</label>
 
-					<input
-						name="name"
-						type=""
-						value={values.name}
-						onChange={handleChange}
-						onBlur={handleBlur}
-						className={errors.name && "error"}
-					/>
-					{errors.name && <p className="error-message">{errors.name}</p>}
-				</div>
-				<div className="input-container">
-					<label htmlFor="email">Email:</label>
+						<input
+							name="name"
+							type=""
+							value={values.name}
+							onChange={handleChange}
+							onBlur={handleBlur}
+							className={errors.name && "error"}
+						/>
+						{errors.name && <p className="error-message">{errors.name}</p>}
+					</div>
+					<div className="input-container">
+						<label htmlFor="email">Email:</label>
 
-					<input
-						name="email"
-						type=""
-						value={values.email}
-						onChange={handleChange}
-						onBlur={handleBlur}
-						className={errors.email && "error"}
-					/>
-					{errors.email && <p className="error-message">{errors.email}</p>}
-				</div>
-				<div className="input-container">
-					<label htmlFor="message">Message:</label>
+						<input
+							name="email"
+							type=""
+							value={values.email}
+							onChange={handleChange}
+							onBlur={handleBlur}
+							className={errors.email && "error"}
+						/>
+						{errors.email && <p className="error-message">{errors.email}</p>}
+					</div>
+					<div className="input-container">
+						<label htmlFor="message">Message:</label>
 
-					<textarea
-						name="message"
-						value={values.message}
-						onChange={handleChange}
-						onBlur={handleBlur}
-						className={errors.message && "error"}
-					/>
-					{errors.message && <p className="error-message">{errors.message}</p>}
-				</div>
-				<div className="button-container">
-					<div className="completion-message-container">
-						{formCompletion.wasCompleted && (
-							<p className="submitted">Email Sent</p>
-						)}
-						{formCompletion.errorMessage && (
-							<p className="not-submitted">{formCompletion.errorMessage}</p>
+						<textarea
+							name="message"
+							value={values.message}
+							onChange={handleChange}
+							onBlur={handleBlur}
+							className={errors.message && "error"}
+						/>
+						{errors.message && (
+							<p className="error-message">{errors.message}</p>
 						)}
 					</div>
-					<button
-						name="submit"
-						disabled={isSubmitting}
-						className="send-button"
-						type="submit"
-						onClick={handleSubmit}
-					>
-						{" "}
-						<MdSend fill="white" />{" "}
-					</button>
-				</div>
-			</form>
+					<div className="button-container">
+						<div className="completion-message-container">
+							{formCompletion.wasCompleted && (
+								<p className="submitted">Email Sent</p>
+							)}
+							{formCompletion.errorMessage && (
+								<p className="not-submitted">{formCompletion.errorMessage}</p>
+							)}
+						</div>
+						<button
+							name="submit"
+							disabled={isSubmitting}
+							className="send-button"
+							type="submit"
+							onClick={handleSubmit}
+						>
+							{" "}
+							<MdSend fill="white" />{" "}
+						</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	);
 };

@@ -65,7 +65,7 @@
 		display: block;
 		min-width: 100%;
 		transform: none;
-		background-color: transparent;
+		background-color: #28208c;
 		min-height: 0;
 	}
 
@@ -87,7 +87,6 @@
 		flex-direction: row;
 		width: 80%;
 		margin: auto;
-		margin-bottom: 80px;
 	}
 
 	.nav-internal-links li {
@@ -98,7 +97,6 @@
 	.nav-external-links {
 		display: flex;
 		flex-direction: column;
-		min-height: 120px;
 		justify-content: space-around;
 		color: white;
 		position: fixed;

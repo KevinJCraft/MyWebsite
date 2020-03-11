@@ -53,7 +53,7 @@ span {
 	.project:hover {
 		transition: all 0.5s;
 		transform: scale(1.05);
-		filter: brightness(50%);
+		filter: brightness(130%);
 	}
 
 	.project:hover .links {

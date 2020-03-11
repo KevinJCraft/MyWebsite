@@ -1,9 +1,8 @@
 .menu-button-container {
 	width: 100%;
 	text-align: right;
-	padding-right: 0.3em;
 	background: none;
-	margin-bottom: 50px;
+	position: absolute;
 }
 
 .menu-button-container button {
