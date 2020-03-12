@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	margin: 5em 0;
 }
 
 .contact-me-page h1 {
