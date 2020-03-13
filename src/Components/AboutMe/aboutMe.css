@@ -36,10 +36,20 @@
 }
 
 .info {
-	margin-bottom: 1em;
 	background-color: rgba(250, 250, 250, 0.6);
-	padding: 1em;
 	border-radius: 3px;
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.info img {
+	height: 6em;
+	width: 6em;
+}
+
+.info-caption {
+	flex: 1;
+	padding: 1em;
 }
 
 .about-me-page h1 {
@@ -57,7 +67,6 @@ h4 {
 
 p {
 	display: block;
-	text-align: right;
 }
 
 @media (min-width: 750px) {
@@ -72,6 +81,26 @@ p {
 		font-size: 1.5em;
 	}
 	.about-me-section p {
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 1024px) {
+	.about-me-header h1 {
+		font-size: 3em;
+		padding-bottom: 1em;
+	}
+	.about-me-container {
+		max-width: 1200px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.about-me-section {
+		flex-basis: 48%;
+	}
+
+	.skills li {
 		font-size: 1.5em;
 	}
 }

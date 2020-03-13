@@ -32,9 +32,6 @@
 		width: auto;
 		margin: auto;
 	}
-
-	.hero section {
-	}
 }
 
 @media (min-width: 1024px) {
@@ -45,6 +42,7 @@
 	.hero {
 		flex: 1;
 		display: flex;
+		max-width: 80%;
 	}
 
 	.hero h1 {

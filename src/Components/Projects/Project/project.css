@@ -35,6 +35,7 @@ span {
 	position: absolute;
 	left: 20%;
 	top: 40%;
+	text-shadow: 5px 5px 5px yellow;
 }
 
 .links a:hover {
@@ -42,10 +43,6 @@ span {
 }
 
 @media (min-width: 1024px) {
-	.project {
-		max-width: 40%;
-	}
-
 	.links {
 		display: none;
 	}
@@ -53,10 +50,12 @@ span {
 	.project:hover {
 		transition: all 0.5s;
 		transform: scale(1.05);
-		filter: brightness(130%);
+		filter: brightness(50%);
 	}
 
 	.project:hover .links {
 		display: flex;
+		font-size: 5em;
+		filter: brightness(150%);
 	}
 }
