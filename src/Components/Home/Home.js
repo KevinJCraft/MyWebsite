@@ -8,10 +8,12 @@ const Home = () => {
   // title = useLoadingEffect("moveup");
 
   return (
-    <div className="home-screen">
+    <div className="hero">
       <MenuButton />
-      <div className="hero">
+      <div className="row">
         <img src={require("../../Images/logo.png")} alt="logo" />
+      </div>
+      <div className="row">
         <section>
           <h1>WELCOME</h1>
           <p>
