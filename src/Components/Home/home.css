@@ -51,6 +51,7 @@
 
   .hero img {
     width: 70%;
+    border-radius: 0;
   }
 
   .hero section {
