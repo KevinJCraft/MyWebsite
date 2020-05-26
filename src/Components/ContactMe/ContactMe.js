@@ -25,7 +25,6 @@ const ContactMe = () => {
       subject: `Website Contact from ${values.name}`,
       text: values.message,
     };
-    console.log(process.env.REACT_APP_SENDGRID_API_KEY);
     sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
     sgMail
       .send(msg)
