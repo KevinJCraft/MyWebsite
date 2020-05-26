@@ -17,9 +17,10 @@ const Home = () => {
         <section>
           <h1>WELCOME</h1>
           <p>
-            My name is Kevin and I am a Frontend Web Developer. I love to create
-            unique user experiences but most of all, I love to problem solve!
-            Let me help you solve some of the problems troubling you.
+            My name is Kevin and I am a Frontend Web Developer here in
+            Louisville, Ky. I love to create unique user experiences but most of
+            all, I love to problem solve! Let me help you solve some of the
+            problems troubling you.
           </p>
         </section>
       </div>
