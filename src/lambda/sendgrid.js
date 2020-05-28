@@ -1,8 +1,8 @@
-import { setApiKey, send } from "@sendgrid/mail";
+const sendGrid = require("@sendgrid/mail");
 
-export function handler(event, context, callback) {
+exports.handler = function (event, context, callback) {
   if (event.httpMethod === "POST") {
-    setApiKey(process.env.REACT_APP_SENDGRID_API_KEY); //API KEY stored in file not tracked by git
+    sendGrid.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY); //API KEY stored in file not tracked by git
     const body = JSON.parse(event.body);
     const msg = {
       to: "Craft.Kevin.J@Gmail.com",
@@ -13,7 +13,8 @@ export function handler(event, context, callback) {
 
     console.log("msg :", msg);
 
-    send(msg)
+    sendGrid
+      .send(msg)
       .then((result) => {
         callback(null, {
           statusCode: 200,
@@ -28,4 +29,4 @@ export function handler(event, context, callback) {
         });
       });
   }
-}
+};
