@@ -3,10 +3,6 @@ import MenuButton from "../MenuButton";
 import "./home.css";
 
 const Home = () => {
-  //const el = useLoadingEffect("fade");
-  //const name = useLoadingEffect("moveleft");
-  // title = useLoadingEffect("moveup");
-
   return (
     <div className="hero">
       <MenuButton />

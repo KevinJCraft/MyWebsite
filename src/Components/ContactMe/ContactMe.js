@@ -4,7 +4,6 @@ import useFormValidation from "../../Hooks/useFormValidation/useFormValidation";
 import axios from "axios";
 import "./contactMe.css";
 import { MdSend } from "react-icons/md";
-import sgMail from "@sendgrid/mail";
 
 const INITIAL_STATE = {
   name: "",
@@ -19,16 +18,14 @@ const ContactMe = () => {
   });
 
   function sendMail() {
-    const msg = {
-      to: "Craft.Kevin.J@Gmail.com",
-      from: values.email,
-      subject: `Website Contact from ${values.name}`,
-      text: values.message,
-    };
-    sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
-    sgMail
-      .send(msg)
+    axios
+      .post("/.netlify/functions/sendgrid", {
+        name: values.name,
+        email: values.email,
+        message: values.message,
+      })
       .then((res) => {
+        console.log(res);
         if (res.status === 200) {
           setFormCompletion({
             wasCompleted: true,
