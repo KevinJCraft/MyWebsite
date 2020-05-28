@@ -1,4 +1,4 @@
-import { setApiKey, send } from "@sendGrid/mail";
+import { setApiKey, send } from "@sendgrid/mail";
 
 export function handler(event, context, callback) {
   if (event.httpMethod === "POST") {
