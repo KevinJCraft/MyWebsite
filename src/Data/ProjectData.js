@@ -1,5 +1,13 @@
 const projectData = [
   {
+    name: "Poker Vloger Website",
+    description:
+      "This website was made with Create-React-App, React Router, bootstrap, and Youtube's Data API.  This site is hosted by Netlify",
+    gitLink: "https://github.com/KevinJCraft/adamrudepoker",
+    demoLink: "https://AdamRudePoker.com",
+    imgPath: require("../Images/Adam-Rude-Poker.JPG"),
+  },
+  {
     name: "Holdem Odds Calculator",
     description:
       "Find out your odds of winning with every card dealt.  This app was made with create-react-app, react-bootsrap, and bootstrap v4",
