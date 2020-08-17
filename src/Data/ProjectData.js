@@ -1,5 +1,13 @@
 const projectData = [
   {
+    name: "Chat-App",
+    description:
+      "This is a Node.js application with an Express server and React front-end.  This also uses Socket.io for real time communication.",
+    gitLink: "https://github.com/KevinJCraft/chat-app",
+    demoLink: "https://powerful-mesa-85681.herokuapp.com/",
+    imgPath: require("../Images/chat-app.JPG"),
+  },
+  {
     name: "Poker Vloger Website",
     description:
       "This website was made with Create-React-App, React Router, bootstrap, and Youtube's Data API.  This site is hosted by Netlify",
