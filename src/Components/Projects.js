@@ -11,11 +11,24 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "3rem 0",
   },
-  headerImg: {
+  headerImgContainer: {
     width: "80%",
     [theme.breakpoints.up("md")]: {
       width: "35%",
     },
+  },
+  lazyContainer: {
+    width: "100%",
+    position: "relative",
+    height: 0,
+    paddingBottom: "28.4%",
+  },
+  headerImg: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
   },
   container: {
     marginTop: "3rem",
@@ -33,11 +46,15 @@ const Projects = () => {
           alignItems="center"
           justify="center"
         >
-          <img
-            src={projectHeader}
-            alt="projects"
-            className={classes.headerImg}
-          />
+          <Box className={classes.headerImgContainer}>
+            <Box className={classes.lazyContainer}>
+              <img
+                src={projectHeader}
+                alt="projects"
+                className={classes.headerImg}
+              />
+            </Box>
+          </Box>
         </Grid>
 
         <Divider variant="middle" />

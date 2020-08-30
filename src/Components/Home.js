@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import logo from "../Images/logo.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Divider, Grid, Fade, Box } from "@material-ui/core";
@@ -16,15 +18,26 @@ import { DiJavascript1 } from "react-icons/di";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+  pageContainer: {
+    paddingBottom: "3rem",
+  },
   logoContainer: {
     width: "95%",
     height: "auto",
     margin: "auto",
     padding: "3rem 1rem 3rem 1rem",
   },
+  lazyContainer: {
+    position: "relative",
+    height: 0,
+    paddingBottom: "71%",
+  },
   logo: {
+    position: "absolute",
+    top: 0,
+    left: 0,
     width: "100%",
-    borderRadius: "10px",
+    height: "100%",
   },
   title: {
     padding: "3rem 0",
@@ -82,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
   skillsText: {
     margin: "2rem auto .5rem ",
     width: "90%",
+    minHeight: "3rem",
   },
   actionLink: {
     textDecoration: "none",
@@ -96,7 +110,7 @@ const Home = () => {
   const classes = useStyles();
   return (
     <Fade in={true} timeout={1000}>
-      <Grid container>
+      <Grid container className={classes.pageContainer}>
         <Grid
           item
           xs={12}
@@ -105,7 +119,9 @@ const Home = () => {
           className={classes.logoContainer}
         >
           <Grid xs={12} md={6} item>
-            <img src={logo} alt="logo" className={classes.logo} />
+            <Box className={classes.lazyContainer}>
+              <img src={logo} alt="logo" className={classes.logo} />
+            </Box>
             <Typography variant="h5" align="center" className={classes.title}>
               Creating{" "}
               <TextLoop interval={2000}>
@@ -122,7 +138,7 @@ const Home = () => {
           item
           xs={12}
           container
-          alignItems="center"
+          alignItems="flex-end"
           className={classes.Container}
         >
           <Grid className={classes.gridItem} item xs={12} md={6}>
@@ -130,22 +146,22 @@ const Home = () => {
               A little about me..
             </Typography>
             <Typography className={classes.aboutMeText}>
-              I live in Louisville, Ky and am an aspiring web developer. I
-              started my journey toward this career path with the help of{" "}
+              I am an aspiring Web Developer located in Louisville, Ky. My
+              journey towards this career path began with{" "}
               <a href="https://codelouisville.org" target="_bland">
                 Code Louisvile
               </a>{" "}
-              in August of 2019 and absolutely love it. I am outgoing,
-              dedicated, and open-minded. I believe that a person should work on
+              in August of 2019 and I absolutely love it. With an outgoing and
+              dedicated personality, I believe that a person should work on
               developing their professional skills and learn new things all the
-              time. Currently, I am looking to find a place where I can
+              time. My ideal work environement would be a place where I can
               contribute on day one and continue to learn and grow from the
-              talented people around me
+              talented people around me.
             </Typography>
             <Typography className={classes.linkText} align="right">
-              <Link to={"./about"} className={classes.actionLink}>
+              <NavLink to="./about" className={classes.actionNavLink}>
                 {">>learn more here"}
-              </Link>
+              </NavLink>
             </Typography>
             <Divider variant="middle" />
           </Grid>
@@ -174,14 +190,19 @@ const Home = () => {
                 </a>
               </Typography>
 
-              <Typography variant="caption" display="block" align="right">
+              <Typography
+                style={{ paddingBottom: "1rem" }}
+                variant="caption"
+                display="block"
+                align="right"
+              >
                 <small>Inventor of the World Wide Web</small>
               </Typography>
+              <Divider variant="middle" className={classes.divider} />
             </Grid>
-            <Divider variant="middle" className={classes.divider} />
           </Grid>
         </Grid>
-        <Grid container alignItems="center" className={classes.Container}>
+        <Grid container alignItems="flex-end" className={classes.Container}>
           <Grid item xs={12} md={4}>
             <Grid
               container
@@ -202,6 +223,7 @@ const Home = () => {
                 {">>projects"}
               </Link>
             </Typography>
+            <Divider variant="middle" />
           </Grid>
           <Grid item xs={12} md={4}>
             <Grid
@@ -220,6 +242,7 @@ const Home = () => {
                 {">>projects"}
               </Link>
             </Typography>
+            <Divider variant="middle" />
           </Grid>
           <Grid item xs={12} md={4}>
             <Grid
@@ -240,8 +263,8 @@ const Home = () => {
                 {">>projects"}
               </Link>
             </Typography>
+            <Divider variant="middle" />
           </Grid>
-          <Divider variant="middle" />
         </Grid>
       </Grid>
     </Fade>

@@ -4,7 +4,6 @@ import axios from "axios";
 import { MdSend } from "react-icons/md";
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  Typography,
   Button,
   TextField,
   FormControl,
@@ -13,6 +12,8 @@ import {
   Divider,
   Box,
   Fade,
+  Card,
+  CardHeader,
 } from "@material-ui/core";
 import messageImage from "../Images/message.jpg";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
@@ -30,11 +31,24 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "3rem 0",
   },
-  headerImg: {
+  headerImgContainer: {
     width: "80%",
     [theme.breakpoints.up("md")]: {
       width: "50%",
     },
+  },
+  lazyContainer: {
+    width: "100%",
+    position: "relative",
+    height: 0,
+    paddingBottom: "15.5%",
+  },
+  headerImg: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
   },
   container: {
     marginTop: "3rem",
@@ -69,7 +83,6 @@ const useStyles = makeStyles((theme) => ({
   modal: {
     width: "80%",
     maxWidth: "400px",
-    height: "200px",
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -122,7 +135,7 @@ const ContactMe = () => {
         console.log("Error: ", err);
         setFormCompletion({
           wasCompleted: false,
-          errorMessage: "Email not sent. Server Error",
+          errorMessage: err.message,
           respond: true,
         });
         setSubmitting(false);
@@ -157,11 +170,15 @@ const ContactMe = () => {
           alignItems="center"
           justify="center"
         >
-          <img
-            src={contactMeHeader}
-            alt="projects"
-            className={classes.headerImg}
-          />
+          <Box className={classes.headerImgContainer}>
+            <Box className={classes.lazyContainer}>
+              <img
+                src={contactMeHeader}
+                alt="projects"
+                className={classes.headerImg}
+              />
+            </Box>
+          </Box>
         </Grid>
 
         <Divider variant="middle" />
@@ -246,15 +263,27 @@ const ContactMe = () => {
                 >
                   {formCompletion.errorMessage ? (
                     <>
-                      <ErrorOutlineIcon className={classes.errorIcon} />
-                      <Typography variant="h3">
-                        {formCompletion.errorMessage}
-                      </Typography>
+                      <Card>
+                        <CardHeader
+                          avatar={
+                            <ErrorOutlineIcon className={classes.errorIcon} />
+                          }
+                          title="Message Not Sent"
+                          subheader={formCompletion.errorMessage}
+                        />
+                      </Card>
                     </>
                   ) : (
                     <>
-                      <DoneAllIcon className={classes.successIcon} />
-                      <Typography variant="h3">Email Sent</Typography>
+                      <Card>
+                        <CardHeader
+                          avatar={
+                            <DoneAllIcon className={classes.successIcon} />
+                          }
+                          title="Message Sent"
+                          subheader="Thank you for the message.  I will get back to you as soon as possible."
+                        />
+                      </Card>
                     </>
                   )}
                 </Grid>

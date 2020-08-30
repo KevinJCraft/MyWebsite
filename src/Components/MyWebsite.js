@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe.js";
 import ContactMe from "./ContactMe.js";
 import Projects from "./Projects.js";
 import NoPath from "./NoPath.js";
+import ScrollToTop from "./ScrollToTop.js";
 import { Box, CssBaseline } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -36,6 +37,7 @@ const MyWebsite = () => {
   return (
     <Router>
       <CssBaseline />
+      <ScrollToTop />
       <MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
         <Header />
         <MenuButton />

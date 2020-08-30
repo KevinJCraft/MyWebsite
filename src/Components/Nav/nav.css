@@ -57,7 +57,7 @@
 }
 .nav-internal-links a:hover,
 .nav-internal-links .active {
-  color: black;
+  color: #28208c;
   background-color: rgba(250, 250, 250, 0.6);
 }
 
