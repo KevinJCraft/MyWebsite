@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../Images/logo2.png";
+import logo from "../Images/logo.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Divider, Grid, Fade } from "@material-ui/core";
+import { Typography, Divider, Grid, Fade, Box } from "@material-ui/core";
 import TextLoop from "react-text-loop";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
 import {
@@ -43,7 +43,24 @@ const useStyles = makeStyles((theme) => ({
       padding: "4rem",
     },
   },
+  aboutMeTitle: {
+    padding: "1rem 0",
+    textTransform: "uppercase",
+    color: "#28208C",
+    textDecoration: "underline",
+  },
   aboutMeText: {},
+  quoteBox: {
+    padding: "1.5rem 0",
+  },
+  quoteTextContainer: {
+    padding: "1rem 0",
+  },
+  quoteText: {
+    fontSize: "2rem",
+    fontStyle: "italic",
+    opacity: "0.7",
+  },
   openQuoteIcon: {
     opacity: "0.3",
     fontSize: "3rem",
@@ -101,9 +118,17 @@ const Home = () => {
           </Grid>
           <Divider variant="middle" />
         </Grid>
-        <Grid item xs={12} container className={classes.Container}>
+        <Grid
+          item
+          xs={12}
+          container
+          alignItems="center"
+          className={classes.Container}
+        >
           <Grid className={classes.gridItem} item xs={12} md={6}>
-            <Typography variant="h6">A little about me..</Typography>
+            <Typography variant="h6" className={classes.aboutMeTitle}>
+              A little about me..
+            </Typography>
             <Typography className={classes.aboutMeText}>
               I live in Louisville, Ky and am an aspiring web developer. I
               started my journey toward this career path with the help of{" "}
@@ -124,27 +149,42 @@ const Home = () => {
             </Typography>
             <Divider variant="middle" />
           </Grid>
-          <Grid className={classes.gridItem} item xs={12} md={6}>
-            <FormatQuoteIcon className={classes.openQuoteIcon} />
-            <Typography variant="body2" display="inline">
-              {"  "}The Web as I envisaged it, we have not seen it yet. The
-              future is still so much bigger than the past.
-            </Typography>
-            <FormatQuoteIcon className={classes.closeQuoteIcon} />
-            <Typography variant="caption" display="block" align="right">
-              -
-              <a
-                href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tim Berners-Lee
-              </a>
-            </Typography>
+          <Grid
+            className={classes.gridItem}
+            item
+            xs={12}
+            md={6}
+            containter
+            alignItems="center"
+          >
+            <Grid item className={classes.quoteBox}>
+              <Box className={classes.quoteTextContainer}>
+                <FormatQuoteIcon className={classes.openQuoteIcon} />
+                <Typography
+                  className={classes.quoteText}
+                  variant="body2"
+                  display="inline"
+                >
+                  {"  "}The Web as I envisaged it, we have not seen it yet. The
+                  future is still so much bigger than the past.
+                </Typography>
+                <FormatQuoteIcon className={classes.closeQuoteIcon} />
+              </Box>
+              <Typography variant="caption" display="block" align="right">
+                -
+                <a
+                  href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tim Berners-Lee
+                </a>
+              </Typography>
 
-            <Typography variant="caption" display="block" align="right">
-              <small>Inventor of the World Wide Web</small>
-            </Typography>
+              <Typography variant="caption" display="block" align="right">
+                <small>Inventor of the World Wide Web</small>
+              </Typography>
+            </Grid>
             <Divider variant="middle" className={classes.divider} />
           </Grid>
         </Grid>

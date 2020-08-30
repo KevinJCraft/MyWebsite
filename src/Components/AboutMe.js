@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "4rem",
   },
   resumeButton: {
-    position: "relative",
+    position: "absolute",
     top: "15px",
     right: "15px",
   },
