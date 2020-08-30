@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import MyWebsite from "./Components/MyWebsite";
+import MyWebsite from "./Components/MyWebsite.js";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<MyWebsite />, document.getElementById("root"));

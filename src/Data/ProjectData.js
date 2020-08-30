@@ -26,7 +26,7 @@ const projectData = [
   {
     name: "Pokedex",
     description:
-      "Catch'em all with the help of my Pokedex.  Find the stats on all of your favorite Pokemon.  This site uses React and React Router",
+      "Catch'em all with the help of my Pokedex.  Find the stats on all of your favorite Pokemon.  This site uses React, React Router and PokeApi",
     gitLink: "https://github.com/KevinJCraft/Code-Lou-Pokedex",
     demoLink: "http://kjc-pokedex.surge.sh/",
     imgPath: require("../Images/Pokedex-demo-img.JPG"),
