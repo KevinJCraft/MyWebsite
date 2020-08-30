@@ -108,7 +108,7 @@ const Home = () => {
             <img src={logo} alt="logo" className={classes.logo} />
             <Typography variant="h5" align="center" className={classes.title}>
               Creating{" "}
-              <TextLoop>
+              <TextLoop interval={2000}>
                 <span className={classes.scrollText}>Easy to Use</span>
                 <span className={classes.scrollText}>Bug Free</span>
                 <span className={classes.scrollText}>Stylish</span>
@@ -149,14 +149,7 @@ const Home = () => {
             </Typography>
             <Divider variant="middle" />
           </Grid>
-          <Grid
-            className={classes.gridItem}
-            item
-            xs={12}
-            md={6}
-            containter
-            alignItems="center"
-          >
+          <Grid className={classes.gridItem} item xs={12} md={6} container>
             <Grid item className={classes.quoteBox}>
               <Box className={classes.quoteTextContainer}>
                 <FormatQuoteIcon className={classes.openQuoteIcon} />
@@ -188,7 +181,7 @@ const Home = () => {
             <Divider variant="middle" className={classes.divider} />
           </Grid>
         </Grid>
-        <Grid container className={classes.Container}>
+        <Grid container alignItems="center" className={classes.Container}>
           <Grid item xs={12} md={4}>
             <Grid
               container

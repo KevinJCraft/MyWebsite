@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import aboutMeHeader from "../Images/aboutMeHeader.png";
 
-import { Typography, Button, Grid, Box, Divider } from "@material-ui/core";
+import {
+  Typography,
+  Button,
+  Grid,
+  Box,
+  Divider,
+  Fade,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import timeline from "../Data/timelineData";
@@ -17,10 +25,15 @@ import WorkIcon from "@material-ui/icons/Work";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
 const useStyles = makeStyles((theme) => ({
-  header: {
+  headerContainer: {
     textAlign: "center",
-    paddingTop: "4rem",
-    paddingBottom: "4rem",
+    padding: "3rem 0",
+  },
+  headerImg: {
+    width: "80%",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
   resumeButton: {
     position: "absolute",
@@ -29,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   resumeButtonText: {
     textTransform: "none",
+    textDecoration: "underline",
   },
   timeline: {
     marginTop: "3rem",
@@ -61,7 +75,7 @@ const About = () => {
   };
 
   return (
-    <div>
+    <Fade in={true} timeout={1000}>
       <Box>
         <Grid
           container
@@ -87,12 +101,24 @@ const About = () => {
           </Link>
         </Grid>
 
-        <Typography className={classes.header} variant="h2">
-          My History
-        </Typography>
+        <Grid
+          className={classes.headerContainer}
+          container
+          alignItems="center"
+          justify="center"
+        >
+          <img
+            src={aboutMeHeader}
+            alt="projects"
+            className={classes.headerImg}
+          />
+        </Grid>
         <Divider variant="middle" />
 
-        <VerticalTimeline className={classes.timeline}>
+        <VerticalTimeline
+          animate={window.innerWidth > 1170}
+          className={classes.timeline}
+        >
           {timeline.map((event, index) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -110,7 +136,7 @@ const About = () => {
           ))}
         </VerticalTimeline>
       </Box>
-    </div>
+    </Fade>
   );
 };
 

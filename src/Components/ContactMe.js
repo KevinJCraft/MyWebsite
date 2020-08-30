@@ -17,6 +17,7 @@ import {
 import messageImage from "../Images/message.jpg";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import contactMeHeader from "../Images/contactMeHeader.png";
 
 const INITIAL_STATE = {
   name: "",
@@ -25,10 +26,15 @@ const INITIAL_STATE = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  header: {
+  headerContainer: {
     textAlign: "center",
-    paddingTop: "4rem",
-    paddingBottom: "4rem",
+    padding: "3rem 0",
+  },
+  headerImg: {
+    width: "80%",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
   container: {
     marginTop: "3rem",
@@ -145,9 +151,18 @@ const ContactMe = () => {
   return (
     <Fade in={true} timeout={1000}>
       <Box>
-        <Typography className={classes.header} variant="h2">
-          Contact
-        </Typography>
+        <Grid
+          className={classes.headerContainer}
+          container
+          alignItems="center"
+          justify="center"
+        >
+          <img
+            src={contactMeHeader}
+            alt="projects"
+            className={classes.headerImg}
+          />
+        </Grid>
 
         <Divider variant="middle" />
 

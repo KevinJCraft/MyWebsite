@@ -5,7 +5,7 @@ import bannerImage from "../Images/banner.jpg";
 const useStyles = makeStyles((theme) => ({
   header: {
     width: "100vw",
-    height: "275px",
+    height: "200px",
     background: `url(${bannerImage})`,
     [theme.breakpoints.up("md")]: {
       height: "400px",
