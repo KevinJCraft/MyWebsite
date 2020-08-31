@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../Images/logo.png";
+import logo from "../Images/blue-gray-logo2.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Divider, Grid, Fade, Box } from "@material-ui/core";
 import TextLoop from "react-text-loop";
