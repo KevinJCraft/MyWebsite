@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import aboutMeHeader from "../Images/aboutMeHeader.png";
 
 import {
   Typography,
@@ -12,8 +11,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import timeline from "../Data/timelineData";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -22,7 +19,11 @@ import "react-vertical-timeline-component/style.min.css";
 
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
+import StarIcon from "@material-ui/icons/Star";
 import GetAppIcon from "@material-ui/icons/GetApp";
+
+import timeline from "../Data/timelineData";
+import aboutMeHeader from "../Images/aboutMeHeader.png";
 
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
@@ -97,7 +98,7 @@ const About = () => {
           alignItems="center"
         >
           <Link
-            to="/resources/resume.docx"
+            to="/resources/Kevin-J-Craft-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
@@ -151,6 +152,10 @@ const About = () => {
               <p>{event.description}</p>
             </VerticalTimelineElement>
           ))}
+          <VerticalTimelineElement
+            iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+            icon={<StarIcon />}
+          />
         </VerticalTimeline>
       </Box>
     </Fade>

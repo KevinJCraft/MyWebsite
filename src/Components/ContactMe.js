@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import useFormValidation from "../Hooks/useFormValidation/useFormValidation";
+
 import axios from "axios";
-import { MdSend } from "react-icons/md";
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
@@ -15,7 +16,9 @@ import {
   Card,
   CardHeader,
 } from "@material-ui/core";
+
 import messageImage from "../Images/message.jpg";
+import { MdSend } from "react-icons/md";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import contactMeHeader from "../Images/contactMeHeader.png";

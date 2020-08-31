@@ -29,7 +29,7 @@ export default [
     location: "Paducah, Ky",
     name: "Professional Poker Coach",
     description:
-      "Helped students increase their ROI and limit their variance through a serious of online sessions aimed at addressing each persons individual needs.",
+      "Helped students increase their ROI and limit their variance through a series of online sessions aimed at addressing each persons individual needs.",
   },
   {
     date: "2006 - 2010",
