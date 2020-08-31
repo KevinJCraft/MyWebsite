@@ -154,7 +154,7 @@ const Home = () => {
               in August of 2019 and I absolutely love it. With an outgoing and
               dedicated personality, I believe that a person should work on
               developing their professional skills and learn new things all the
-              time. My ideal work environement would be a place where I can
+              time. My ideal work environment would be a place where I can
               contribute on day one and continue to learn and grow from the
               talented people around me.
             </Typography>
