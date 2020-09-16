@@ -98,7 +98,7 @@ const About = () => {
           alignItems="center"
         >
           <Link
-            to="/resources/Kevin-J-Craft-Resume2.pdf"
+            to="/resources/Kevin-J-Craft-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
