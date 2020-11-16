@@ -146,7 +146,8 @@ const Home = () => {
               A little about me..
             </Typography>
             <Typography className={classes.aboutMeText}>
-              I am an aspiring Web Developer located in Louisville, Ky. My
+              I am a Web App Developer for {" "}
+              <a href="https://carkeysexpress.com/">Car Keys Express</a> {" "} located in Louisville, Ky. My
               journey towards this career path began with{" "}
               <a href="https://codelouisville.org" target="_bland">
                 Code Louisvile

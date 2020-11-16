@@ -1,4 +1,12 @@
 export default [
+  
+  {
+    date: "2002 - present",
+    type: "work",
+    location: "Louisville, Ky",
+    name: "Car Keys Express - Web App Developer",
+    description: "Writing well designed, efficent code by using best development practices.  Creating user interfaces with PHP, Javascript, HTML and CSS.  Integrating data from various back-end services and databases."
+  },
   {
     date: "2019 - 2020",
     type: "school",
@@ -8,7 +16,7 @@ export default [
       "Recieved a certificate of coding from JCTCS and Code Louisville for completion of thier Front and Backend Courses.",
   },
   {
-    date: "2011 - present",
+    date: "2011 - 2020",
     type: "work",
     location: "Louisville, Ky",
     name: "USPS - Letter Carrier / Supervisor",
